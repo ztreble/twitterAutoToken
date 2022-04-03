@@ -36,6 +36,7 @@ jobs:
             cd guest
             sudo cp -p ./chromedriver /usr/bin/
             chmod -R 777 /usr/bin/chromedriver
+            sudo dpkg -i ./google-chrome_amd64.deb
       - name: Run
         run: |
             cd guest
@@ -51,5 +52,3 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
              github_token: ${{ secrets.GITHUB_TOKEN }}
-            
-  
